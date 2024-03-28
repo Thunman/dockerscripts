@@ -1,8 +1,10 @@
+#!/bin/bash
+
 docker run -d \
 --name emby \
---volume /config-files/emby:/config \
---volume /HDDs/1TB/dls:/mnt/1TB \
---volume /HDDs/500GB/dls:/mnt/500GB \
+--volume ~/config-files/emby:/config \
+--volume ~/HDDs/1TB/dls:/mnt/1TB \
+--volume ~/HDDs/500GB/dls:/mnt/500GB \
 --network my-net \
 --device /dev/dri:/dev/dri \
 --gpus all \
